@@ -13,10 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/series', [\App\Http\Controllers\SeriesController::class, 'index']);
+
+Route::get('/', [\App\Http\Controllers\SeriesController::class, 'index']);
 Route::get('/series/create', [\App\Http\Controllers\SeriesController::class, 'create']);
 Route::post('/series/salvar', [\App\Http\Controllers\SeriesController::class, 'store']);
